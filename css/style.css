@@ -83,7 +83,7 @@ li {
 .navbar {
     display: flex;
     justify-content: space-between;
-    width: 1332px;
+    width: 100%;
     height: 100px;
     overflow: hidden;
 }
@@ -94,17 +94,21 @@ li {
     margin-top: 30px;
 }
 
-.navbar-list {
-    margin-top: 24px;
+.menu-navbar {
+    width: 260px;
+    justify-content: space-between;
 }
-.menu-navbar .list-nav {
+
+.navbar-list .list-nav {
     height: 100%;
 }
 
-.menu-navbar ul {
+.navbar-list {
+    margin-top: 24px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
 }
 
 .list-nav::before {
@@ -113,7 +117,7 @@ li {
     background-color: #0065FC;
     width: 0;
     height: 3px;
-    top: 24px;
+    top: -24px;
     left:0;
     transition: width 0.4s ease-in-out;
 
@@ -121,7 +125,6 @@ li {
 
 .list-nav:hover:before {
     width: 100%;
-
 }
 
 .surlign {
@@ -217,7 +220,7 @@ form {
     display: flex;
     align-items: center;
     margin: 30px 0;
-    width: 45%;    
+    width: 50%;    
     justify-content: space-between;
 }
 
@@ -496,10 +499,10 @@ h4 {
     padding-left: 0;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/* Le code ci-dessous correspond à la version responsive uniquement
 
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+***** Media queries **********
+Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .navbar {
         width: 100%;
@@ -588,38 +591,19 @@ h4 {
 /* Navbar */
 
 @media (max-width: 768px) {
-    body {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
     .main-container {
         width: 100%;
         padding: 0;
     }
-    header {
-        width: 100%;
-    }
 
     .navbar {
         width: 100%;
-        height: 50%;
+        height: 150px;
         flex-direction: column;
-        align-items: center;
     }
 
-    .logo-booki {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5%;
-        }
-
-    .logo-booki img {
-        width: 30%;
-        height: auto;
+    .logo-booki{
+        width: auto;
     }
 
     .logo-booki a {
@@ -627,202 +611,162 @@ h4 {
         justify-content: center;
     }
 
-    .menu-navbar {
-        display: flex;
+    .navbar-list {
         width: 100%;
+    }
+
+    .menu-navbar {
+        width: 100%;
+        height: 60px;
     }
 
     .menu-navbar ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .navbar-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        font-size: larger;
-        margin: 30px 0;
+        justify-content: space-around;
+        font-size: 30px;
     }
 
-    .list-nav::before {
-        content: '';
-        position: absolute;
-        background-color: #0065FC;
-        width: 0;
-        height: 3px;
-        top: 45px;
-        left: 0;
-        transition: width 0.4s ease-in-out;
+
+    /* Info */
+
+    .info-group, .filter-container, .info-container {
+        padding: 0 30px;
     }
-    .list-nav:hover:before {
+
+    .info-group {
         width: 100%;
     }
 
-    body {
-        padding: 0;
+    .info-group h2 {
+       font-size: 40px;
+    }
+
+    .filter-container-filter {
+        width: 100%;
+    }
+
+    .filter-container-h2 {
+        order: 0;
+    }
+
+    .info-group p {
+        margin-top: 10px;
+        font-size: 29px;
     }
 
     .info-text {
         width: 80%;
-        margin-left: 50px;
-    }
-
-    .info-text h2 {
-        margin: 15px 0 10px 0;
-    }
-
-    .info-text p {
-        margin-top: 0;
-    }
-
-    form {
-        display: flex;
-        width: 100%;
-        height: 70px;
-    }
-
-    .form-container label {
-        width: 85px;
-        font-size: 20px;
-        border-radius: 20px 0 0 20px;
-        background-color: #F2F2F2;
     }
 
     .section-search {
-        display: flex;
+        width: 100%;
     }
 
-    .form {
+    form {
+        width: 100%;
+        display: flex;
         justify-content: center;
     }
 
-    .form-container input[type='text'] {
-        max-width: 300px;
-        min-width: 300px;
+    .form-container {
         width: 100%;
-        padding: 15px;
-        font-weight: bold;
-        font-size: 15px;
-        border: 1px solid #F2F2F2
     }
 
-    .button-mobile {
-        display: block;
-        width: 80px;
-        height: 100%;
-        padding: 0 10px;
-        border-radius: 20px;
-        border: none;
-        color: white;
-        background-color: var(--main-color);
-    }
-
-    .button-mobile i {
-        color: white;
-        font-size: 20px;
-    }
-
-    .button-desktop {
-        display: none;
-    }
-
-    .filter-container {
+    .filter-container-filter {
+        width: 100%;
+        height: auto;
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-        border-radius: 30px;
+        gap: 20px;
     }
 
-    .filter-container h2 {
-        margin-left: 50px;
+    .small-screen-filter {
+        width: 45%;
+        height: 80px;
+        border-radius: 45px;
+        justify-content: flex-start;
+        font-size: 4vw;
     }
 
-    .filter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35%;
-        margin-bottom: 10px;
-        height: 70px;
-        border-radius: 30px;
-        border: solid 2px #D9D9D9;
-    }
+    .logo-filter {
+        margin: 0 30px;
 
-    .filter-container h2 {
-        margin-right: 250px;
     }
-
-    .hebergements-and-populaires section {
-        flex-direction: column;
-        border-radius: 0;
-    }
+    /* Hebergement et populaire */
 
     .populaires {
         order: -1;
+        width: 100%;
     }
 
-    .hebergement {
-        width: 100%;
-        margin-top: 50px;
+    .info-group {
+        margin-top: 60px;
     }
 
-    .populaires {
+    .hebergements-and-populaires {
         width: 100%;
-        margin-top: 0;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+
+    .hebergement-title {
+        margin-bottom: 20px;
+    }
+
+    .populaires-title h2 {
+       font-size: 40px;
+       margin-bottom: 5px;
     }
 
     .populaires-cards {
-        display: flex;
+        align-items: center;
+    }
+
+    .populaires-cards, .hebergement-cards {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
 
     .populaires-cards a {
         width: 100%;
-        box-sizing: border-box;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires .card-content{
+    .card-2 {
         width: 100%;
+        height: 290px;
+        margin-top: 0;
+    }
+
+    .hebergement img {
+        height: 180px;
     }
 
     .card-link {
-        width: 100%;
+        width: 85%;
     }
 
-    .hebergement-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .activity {
+        width: 100vw;
     }
 
-   .activity .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
+    .activity h3 {
+        margin-left: 60px;
+        font-size: xx-large;
+    }
+
+    .activity .card-container {
         height: auto;
-        border-radius: 30px; 
-        margin: 40px 0 60px;
+        gap: 50px;
     }
 
-    .activity a {
-        height: 200px;
-    }
 
-    footer {
+    .footer-container {
         flex-direction: column;
     }
 
-    .footer-props, .footer-hebergement, .footer-assist {
-        width: auto;
-        margin: 10px 0;
+    .footer-props {
+        margin-left: 60px;
+        font-size: x-large;
     }
 }
