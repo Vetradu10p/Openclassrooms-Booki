@@ -245,6 +245,10 @@ form {
     margin-right: 8px;
 }
 
+.filter-container-h2 {
+    margin: 20px 0 -15px 0;
+}
+
                 /* Infos */
 .info-container {
     display: flex;
@@ -517,10 +521,7 @@ Medium devices (tablets, less/equal than 1024px) */
     }
 
     .filter-container {
-        display: flex;
         width: 100%;
-        flex-wrap: wrap;
-        justify-content: flex-start;
         gap: 20px;
     }
 
@@ -529,6 +530,7 @@ Medium devices (tablets, less/equal than 1024px) */
         text-align: left;
         order: 1;
         font-size: large;
+
     }
 
     .filter-container .filter {
@@ -625,6 +627,15 @@ Medium devices (tablets, less/equal than 1024px) */
         font-size: 30px;
     }
 
+    .navbar-list .surlign {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-list .list-nav {
+        width: 100%;
+    }
 
     /* Info */
 
@@ -640,16 +651,21 @@ Medium devices (tablets, less/equal than 1024px) */
        font-size: 40px;
     }
 
+    .search-location .fa-solid .fa-location-dot {
+        padding: 15px;
+    }
+
     .filter-container-filter {
         width: 100%;
     }
 
     .filter-container-h2 {
         order: 0;
+        font-size: xx-large;
     }
 
     .info-group p {
-        margin-top: 10px;
+        margin: 10px 0 15px 0;
         font-size: 29px;
     }
 
@@ -659,6 +675,7 @@ Medium devices (tablets, less/equal than 1024px) */
 
     .section-search {
         width: 100%;
+        margin-bottom: 50px;
     }
 
     form {
@@ -773,7 +790,22 @@ Medium devices (tablets, less/equal than 1024px) */
         gap: 50px;
     }
 
+    .card-activity-img-1 {
+        background-position: center;
+        background-size: cover;
+    }
+    .card-activity-img-2 {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .card-activity-img-3 {
+        background-position: center;
+        background-size: cover;
+    }
+
     .card-activity-img-4 {
+        background-position: center;
         background-size: cover;
     }
 
@@ -784,5 +816,19 @@ Medium devices (tablets, less/equal than 1024px) */
     .footer-props {
         margin-left: 60px;
         font-size: x-large;
+    }
+
+    /* Footer */
+
+    .footer-container {
+        gap: 10px;
+    }
+
+    .footer-props {
+        margin-left: 0;
+    }
+
+    .footer-choice {
+        font-size: large;
     }
 }
