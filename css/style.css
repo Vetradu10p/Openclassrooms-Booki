@@ -88,10 +88,15 @@ li {
     overflow: hidden;
 }
 
+.logo-booki a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-booki img {
-    width: 15%;
-    height: auto;
-    margin-top: 30px;
+    height: 30%;
 }
 
 .menu-navbar {
@@ -101,14 +106,21 @@ li {
 
 .navbar-list .list-nav {
     height: 100%;
+    display: flex;
 }
 
+.list-nav.surlign a {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .navbar-list {
-    margin-top: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 0;
+    height: 100%;
 }
 
 .list-nav::before {
@@ -117,7 +129,6 @@ li {
     background-color: #0065FC;
     width: 0;
     height: 3px;
-    top: -24px;
     left:0;
     transition: width 0.4s ease-in-out;
 
@@ -510,12 +521,28 @@ Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .navbar {
         width: 100%;
+        height: 100px;
+    }
+
+    .navbar-list {
+        height: 100%;
+    }
+
+    .logo-booki a {
+        width: 100%;
+    }
+
+    .list-nav.surlign a {
+        width: 100%;
     }
 
     .filter {
         width: 20%;
     }
 
+    .filter-title {
+        font-weight: 500;
+    }
     .small-screen-filter {
         width: auto;
     }
@@ -600,7 +627,7 @@ Medium devices (tablets, less/equal than 1024px) */
 
     .navbar {
         width: 100%;
-        height: 150px;
+        height: 230px;
         flex-direction: column;
     }
 
@@ -631,6 +658,10 @@ Medium devices (tablets, less/equal than 1024px) */
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+
+    .list-nav::before {
+        margin-top: 14px;
     }
 
     .navbar-list .list-nav {
